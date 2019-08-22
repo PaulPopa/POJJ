@@ -3,19 +3,12 @@ const app = express();
 
 app.use(express.json());
 
-cities = [];
+employees = [];
 
-app.post('/addcity', function(req, res) {
-  db.addCity(req.body, function(insertedKey) {
-    updateCities(function() {
-      res.send(cities);
-    });
-  });
-});
-
-app.get('/cities', function(req, res) {
-  updateCities(function() {
-    res.send(cities);
+app.get('/employees', function(req, res) {
+  updateEmployees(function() {
+    res.send(employees);
+    console.log(employees);
   });
 });
 
@@ -25,9 +18,9 @@ app.listen(8002, function() {
 
 const db = require('./db.js');
 
-function updateCities(citiesReadyFn) {
-  db.getCitiesInCountry('IRL', function(rows) {
-    cities = rows;
-    citiesReadyFn();
+function updateEmployees(employeesReadyFn) {
+  db.getEmployees(function(rows) {
+    employees = rows;
+    employeesReadyFn();
   });
 }

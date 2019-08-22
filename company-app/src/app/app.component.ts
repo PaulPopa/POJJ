@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { City } from './city'
 import { DataService } from './data.service';
 
 @Component({
@@ -8,7 +7,7 @@ import { DataService } from './data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'My Wonderful City Application';
+  title = 'POJJ';
 
   constructor () { }
 }

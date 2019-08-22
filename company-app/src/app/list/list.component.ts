@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { City } from '../city';
 import { DataService } from '../data.service';
 import { SwitchboardService } from '../switchboard.service';
 
 @Component({
-  selector: 'city-list',
+  selector: 'employee-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  thisCity: City;
   data: DataService;
   switchboard: SwitchboardService;
 
@@ -17,11 +15,6 @@ export class ListComponent implements OnInit {
               switchboard : SwitchboardService) {
     this.data = dataService;
     this.switchboard = switchboard;
-  }
-
-  onSelect(newCity: City): void {
-    this.thisCity = newCity;
-    this.switchboard.switchCity(this.thisCity);
   }
 
   ngOnInit() {

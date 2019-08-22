@@ -1,7 +1,6 @@
 <div class="list">
-  <h2>Cities</h2>
-  <input [(ngModel)]="filterText" placeholder="Filter"/>
+  <h2>Employees</h2>
   <ul>
-    <li *ngFor="let city of data.cities|async|nameFilter:filterText" (click)="onSelect(city)">{{city.name}}</li>
+    <li *ngFor="let employee of data.employees">{{employee.emp_name}}</li>
   </ul>
 </div>

@@ -1,18 +1,22 @@
 import { Injectable } from '@angular/core';
-import { City } from './city';
-
+import { Employee } from './employee';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.getEmployees();
+  }
 
-  cities = this.http.get<City[]>('/api/cities');
+  employees: Employee[] = [];
 
-  public addCity(newCity: City): void {
-     this.cities = this.http.post<City[]>('/api/addcity', newCity);
+  public getEmployees(): void {
+    this.http.get<Employee[]>('/api/employees').subscribe(employees => {
+      this.employees = employees;
+    });
   }
 }
