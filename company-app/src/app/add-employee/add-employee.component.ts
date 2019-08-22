@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Employee } from '../employee';
+import { Department} from '../department';
+import { DepartmentEmployeeComponent } from '../department-employee/department-employee.component';
 
 @Component({
   selector: 'employee-add-employee',
@@ -11,6 +13,11 @@ export class AddEmployeeComponent implements OnInit {
 
   public newEmployee: Employee;
   data: DataService;
+
+  departments = this.data.getDepartments().map(function (obj) {
+    return obj.dep_name;
+    
+  });
 
   constructor(dataService: DataService) {
     this.data = dataService;
