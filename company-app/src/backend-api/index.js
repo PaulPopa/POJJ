@@ -28,11 +28,10 @@ app.get('/departmentemployees', function(req, res) {
 });
 
 app.get('/departments', function(req, res) {
-  updateEmployees(function() {
-    res.send(departmentEmployees);
+  updateDepartments(function() {
+    res.send(departments);
   });
 });
-
 
 app.listen(8002, function() {
   console.log('World API listening on port 8002');

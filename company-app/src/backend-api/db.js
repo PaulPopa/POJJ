@@ -47,9 +47,10 @@ exports.addEmployee = function(data, readyFn){
 }
 
 exports.getDepartments = function(callback) {
-  db.query("SELECT dep_name FROM department;",
+  db.query("SELECT DISTINCT dep_name FROM department;",
     function(err, rows) {
       if (err) throw err;
       callback(rows);
+      console.log(rows);
     });
 }
