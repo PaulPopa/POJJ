@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
 export class EmployeeReportComponent implements OnInit {
   @Input() department: Department;
   switchboard: SwitchboardService;
-  employees : Employee = [];
+  employees = [];
 
   constructor(switchboard : SwitchboardService) {
     this.switchboard = switchboard;
@@ -28,9 +28,16 @@ export class EmployeeReportComponent implements OnInit {
 
       for (var i = 0; i < emp_id.length; i++) {
         var e = new Employee();
-        e.emp_id = emp_id[i];
+        e.emp_id = parseInt(emp_id[i], 10);
         e.emp_name = emp_name[i];
+        e.address = "";
+        e.email = "";
+        e.nin = "";
+        e.bank_acc_number = "";
+        e.bank_sort_code = "";
+        e.start_salary = "";
         this.employees.push(e);
+        console.log(e);
       }
     });
   }

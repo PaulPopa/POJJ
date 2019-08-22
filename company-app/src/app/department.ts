@@ -1,4 +1,5 @@
 export class Department {
-  emp_id: number;
+  emp_id: string;
+  emp_name: string;
   dep_name: string;
 }
