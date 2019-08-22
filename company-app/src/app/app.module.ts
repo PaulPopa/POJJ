@@ -25,7 +25,7 @@ import { EmployeeReportComponent } from './employee-report/employee-report.compo
     NgbModule,
     BrowserModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
