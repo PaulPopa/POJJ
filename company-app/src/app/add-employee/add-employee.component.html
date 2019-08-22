@@ -1,0 +1,8 @@
+<form (ngSubmit)="addEmployee(addForm)" #addForm="ngForm">
+    <fieldset>
+        <legend>Add Employee</legend>
+        <div><input [(ngModel)]="newEmployee.name" name="emp_name" placeholder="Name" required></div>
+        <input type="submit" [disabled]="!addForm.valid">
+    </fieldset>
+</form>
+<div *ngIf="addForm.hasError('required', 'emp_name')">Employee name is required</div>

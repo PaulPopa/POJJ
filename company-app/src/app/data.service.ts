@@ -19,4 +19,10 @@ export class DataService {
       this.employees = employees;
     });
   }
+
+  public addEmployee(newEmployee: Employee): void {
+    this.http.post<Employee[]>('/api/addEmployee', newEmployee).subscribe(employees => {
+      this.employees = employees;
+    });
+  }
 }

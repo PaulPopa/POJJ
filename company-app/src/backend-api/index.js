@@ -12,6 +12,14 @@ app.get('/employees', function(req, res) {
   });
 });
 
+app.post('/addEmployee', function(req, res) {
+  db.addEmployee(req.body, function(insertedKey){
+      updateEmployees(function(){
+          res.send(employees);
+      })
+  })
+});
+
 app.listen(8002, function() {
   console.log('World API listening on port 8002');
 });
@@ -24,3 +32,5 @@ function updateEmployees(employeesReadyFn) {
     employeesReadyFn();
   });
 }
+
+
