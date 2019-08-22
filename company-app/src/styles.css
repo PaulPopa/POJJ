@@ -3,6 +3,14 @@
     text-align: left;
     float: left;
     color: black;
+    font-family: 'Inconsolata', monospace;
+}
+
+.detail {
+    text-align: left;
+    float: right;
+    color: maroon;
+    font-family: 'Inconsolata', monospace;
 }
 
 form input.ng-valid {
@@ -21,4 +29,16 @@ form input {
     padding: 10px 10px;
     margin: 5px 0;
     box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+h1{
+    background-image: linear-gradient(lightblue,white);
+    font-family: 'Inconsolata', monospace;
+}
+
+.punchline {
+    text-align: center;
+    color: black;
+    font-family: 'Inconsolata', monospace;
 }
