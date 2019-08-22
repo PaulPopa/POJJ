@@ -54,3 +54,11 @@ exports.getDepartments = function(callback) {
       console.log(rows);
     });
 }
+
+exports.getDepartmentNames = function(callback) {
+  db.query("SELECT dep_name FROM department;", data,
+  function(error, rows) {
+    if(error) throw error;
+    callback(rows);
+  });
+}
