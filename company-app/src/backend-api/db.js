@@ -22,17 +22,17 @@ exports.getEmployees = function(callback) {
 }
 
 exports.inputEmployee = function(callback) {
-  db.query("INSERT INTO employee ?, ?, ?, ?, ?, ?, ?",
+  db.query("INSERT INTO employee ?, ?, ?, ?, ?, ?, ?;",
   function(err, rows) {
     if (err) throw err;
     callback(rows);
   });
 }
 
-exports.getEmployeesFromDepartment(callback) {
-  db.query("SELECT employee.emp_id, employee.emp_name from employee JOIN department ON employee.emp_id=department.emp_id",
+exports.getEmployeesFromDepartment = function(callback) {
+  db.query("SELECT employee.emp_id, employee.emp_name from employee JOIN department ON employee.emp_id=department.emp_id;",
   function(err, rows) {
-    if(err) throw err;
+    if (err) throw err;
     callback(rows);
   });
 }
