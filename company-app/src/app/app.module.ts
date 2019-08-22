@@ -11,6 +11,12 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { DepartmentEmployeeComponent } from './department-employee/department-employee.component';
 import { DepartmentFilterPipe } from './department-filter.pipe';
 import { EmployeeReportComponent } from './employee-report/employee-report.component';
+import { EmployeeDirective } from './employee.directive';
+import { EmployeeNameDirective } from './employee-name.directive';
+import { EmailDirective } from './email.directive';
+import { NinDirective } from './nin.directive';
+import { BankAccountNumberDirective } from './bank-account-number.directive';
+import { BankSortCodeDirective } from './bank-sort-code.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,13 @@ import { EmployeeReportComponent } from './employee-report/employee-report.compo
     AddEmployeeComponent,
     DepartmentEmployeeComponent,
     DepartmentFilterPipe,
-    EmployeeReportComponent
+    EmployeeReportComponent,
+    EmployeeDirective,
+    EmployeeNameDirective,
+    EmailDirective,
+    NinDirective,
+    BankAccountNumberDirective,
+    BankSortCodeDirective
   ],
   imports: [
     NgbModule,
