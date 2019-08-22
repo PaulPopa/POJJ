@@ -29,10 +29,11 @@ export class DataService {
     });
   }
 
-  public getDepartments(): void {
+  public getDepartments(): Department[] {
     this.http.get<Department[]>('/api/departments').subscribe(departments => {
       this.departments = departments;
     });
+    return this.departments;
   }
 
   public getEmployeesFromDepartment(): void {

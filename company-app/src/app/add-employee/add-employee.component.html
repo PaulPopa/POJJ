@@ -8,8 +8,7 @@
         <div><input [(ngModel)]="newEmployee.bank_acc_number" name="bank_acc_number" placeholder="Bank Account Number" required></div>
         <div><input [(ngModel)]="newEmployee.bank_sort_code" name="bank_sort_code" placeholder="Sort Code" required></div>
         <div><input [(ngModel)]="newEmployee.start_salary" name="start_salary" placeholder="Salary" required></div>
-
-        <input type="submit" [disabled]="!addForm.valid">
+        <div><input [(ngModel)]="newEmployee.dep_name" name="dep_name" placeholder="Department" required departmentDirective></div>
     </fieldset>
 </form>
 <div *ngIf="addForm.hasError('required', 'emp_name')">Please input employee name</div>
@@ -19,3 +18,4 @@
 <div *ngIf="addForm.hasError('required', 'bank_acc_number')">Please input bank account number</div>
 <div *ngIf="addForm.hasError('required', 'bank_sort_code')">Please input sort code</div>
 <div *ngIf="addForm.hasError('required', 'salary')">Please input salary</div>
+<div *ngIf="addForm.hasError('nosuchdept', 'dep_name')">Department is invalid</div>

@@ -7,4 +7,5 @@ export class Employee {
     bank_acc_number: string;
     bank_sort_code: string;
     start_salary: string;
+    dep_name: string;
 }
