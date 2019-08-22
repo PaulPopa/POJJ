@@ -9,8 +9,9 @@
 .detail {
     text-align: left;
     float: right;
-    color: maroon;
+    color: #008B8B;
     font-family: 'Inconsolata', monospace;
+    border-style: outset;
 }
 
 form input.ng-valid {
@@ -40,5 +41,9 @@ h1{
 .punchline {
     text-align: center;
     color: black;
+    font-family: 'Inconsolata', monospace;
+}
+
+.input {
     font-family: 'Inconsolata', monospace;
 }
