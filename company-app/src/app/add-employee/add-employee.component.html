@@ -1,20 +1,20 @@
 <form (ngSubmit)="addEmployee(addForm)" #addForm="ngForm">
     <fieldset>
         <legend>Add Employee</legend>
-        <div><input [(ngModel)]="newEmployee.emp_name" name="emp_name" placeholder="Name" required></div>
         <div *ngIf="addForm.hasError('required', 'emp_name')">Please input employee name</div>
-        <div><input [(ngModel)]="newEmployee.email" name="email" placeholder="Email" required></div>
+        <div><input [(ngModel)]="newEmployee.emp_name" name="emp_name" placeholder="Name" required></div>
         <div *ngIf="addForm.hasError('required', 'email')">Please input email</div>
-        <div><input [(ngModel)]="newEmployee.address" name="address" placeholder="Address" required></div>
+        <div><input [(ngModel)]="newEmployee.email" name="email" placeholder="Email" required></div>
         <div *ngIf="addForm.hasError('required', 'address')">Please input address</div>
-        <div><input [(ngModel)]="newEmployee.nin" name="nin" placeholder="National Insurance Number" required></div>
+        <div><input [(ngModel)]="newEmployee.address" name="address" placeholder="Address" required></div>
         <div *ngIf="addForm.hasError('required', 'nin')">Please input National Insurance Number</div>
-        <div><input [(ngModel)]="newEmployee.bank_acc_number" name="bank_acc_number" placeholder="Bank Account Number" required></div>
+        <div><input [(ngModel)]="newEmployee.nin" name="nin" placeholder="National Insurance Number" required></div>
         <div *ngIf="addForm.hasError('required', 'bank_acc_number')">Please input bank account number</div>
-        <div><input [(ngModel)]="newEmployee.bank_sort_code" name="bank_sort_code" placeholder="Sort Code" required></div>
+        <div><input [(ngModel)]="newEmployee.bank_acc_number" name="bank_acc_number" placeholder="Bank Account Number" required></div>
         <div *ngIf="addForm.hasError('required', 'bank_sort_code')">Please input sort code</div>
-        <div><input [(ngModel)]="newEmployee.start_salary" name="start_salary" placeholder="Salary" required></div>
+        <div><input [(ngModel)]="newEmployee.bank_sort_code" name="bank_sort_code" placeholder="Sort Code" required></div>
         <div *ngIf="addForm.hasError('required', 'salary')">Please input salary</div>
+<<<<<<< HEAD
         <div><input [(ngModel)]="newEmployee.dep_name" name="dep_name" placeholder="Department" required></div>
         <div ng-app="myApp" ng-controller="myCtrl">
 
@@ -23,6 +23,9 @@
             
             </div>
             
+=======
+        <div><input [(ngModel)]="newEmployee.start_salary" name="start_salary" placeholder="Salary" required></div>
+>>>>>>> 94c33f5fb6196a3c03bd6c448ca62b773ae0a6a5
         <input type="submit" [disabled]="!addForm.valid">
         </fieldset>
 </form>
