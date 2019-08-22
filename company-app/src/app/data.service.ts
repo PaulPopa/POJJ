@@ -11,6 +11,8 @@ export class DataService {
 
   constructor(private http: HttpClient) {
     this.getEmployees();
+    this.getDepartments();
+    this.getEmployeesFromDepartment();
   }
 
   employees: Employee[] = [];
@@ -31,6 +33,7 @@ export class DataService {
 
   public getDepartments(): void {
     this.http.get<Department[]>('/api/departments').subscribe(departments => {
+      console.log(departments);
       this.departments = departments;
     });
   }
