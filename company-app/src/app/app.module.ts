@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { DepartmentEmployeeComponent } from './department-employee/department-employee.component';
 import { DepartmentFilterPipe } from './department-filter.pipe';
+import { EmployeeReportComponent } from './employee-report/employee-report.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DepartmentFilterPipe } from './department-filter.pipe';
     ListComponent,
     AddEmployeeComponent,
     DepartmentEmployeeComponent,
-    DepartmentFilterPipe
+    DepartmentFilterPipe,
+    EmployeeReportComponent
   ],
   imports: [
     NgbModule,

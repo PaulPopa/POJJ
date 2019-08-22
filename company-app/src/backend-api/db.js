@@ -39,7 +39,7 @@ exports.addEmployee = function(data, readyFn){
 }
 
 exports.getDepartments = function(callback) {
-  db.query("SELECT DISTINCT dep_name FROM department;",
+  db.query("SELECT GROUP_CONCAT(emp_id) AS emp_id, GROUP_CONCAT(emp_name) AS emp_name, dep_name FROM employee GROUP BY dep_name",
     function(err, rows) {
       if (err) throw err;
       callback(rows);

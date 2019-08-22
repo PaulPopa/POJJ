@@ -1,0 +1,8 @@
+<div class="detail" *ngIf="department">
+  <fieldset>
+    <legend>{{department.dep_name}}</legend>
+    <ul>
+      <li *ngFor="let employee of employees">{{employee.emp_name}}</li>
+    </ul>
+  </fieldset>
+</div>

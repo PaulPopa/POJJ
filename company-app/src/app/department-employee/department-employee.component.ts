@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { SwitchboardService } from '../switchboard.service';
-
+import { Department } from '../department';
 
 @Component({
   selector: 'company-department-employee',
@@ -9,6 +9,7 @@ import { SwitchboardService } from '../switchboard.service';
   styleUrls: ['./department-employee.component.css']
 })
 export class DepartmentEmployeeComponent implements OnInit {
+  thisDepartment: Department;
   data: DataService;
   switchboard: SwitchboardService;
 
@@ -16,6 +17,12 @@ export class DepartmentEmployeeComponent implements OnInit {
               switchboard : SwitchboardService) {
     this.data = dataService;
     this.switchboard = switchboard;
+  }
+
+  onSelect(newDepartment : Department) : void {
+    this.thisDepartment = newDepartment;
+    console.log(newDepartment);
+    this.switchboard.switchDepartment(this.thisDepartment);
   }
 
   ngOnInit() {

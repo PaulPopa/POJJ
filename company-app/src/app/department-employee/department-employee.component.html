@@ -2,6 +2,6 @@
   <h2>Department</h2>
   <input [(ngModel)]="filterText" placeholder="Search Department"/>
   <ul>
-    <li *ngFor="let department of data.departments|departmentFilter:filterText">{{department.dep_name}}</li>
+    <li *ngFor="let department of data.departments|departmentFilter:filterText" (click)="onSelect(department)">{{department.dep_name}}</li>
   </ul>
 </div>
