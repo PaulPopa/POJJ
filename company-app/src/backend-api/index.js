@@ -4,11 +4,12 @@ const app = express();
 app.use(express.json());
 
 employees = [];
+departments = [];
+departmentEmployees = [];
 
 app.get('/employees', function(req, res) {
   updateEmployees(function() {
     res.send(employees);
-    console.log(employees);
   });
 });
 
@@ -19,6 +20,19 @@ app.post('/addEmployee', function(req, res) {
       })
   })
 });
+
+app.get('/departmentemployees', function(req, res) {
+  updateEmployees(function() {
+    res.send(departmentEmployees);
+  });
+});
+
+app.get('/departments', function(req, res) {
+  updateEmployees(function() {
+    res.send(departmentEmployees);
+  });
+});
+
 
 app.listen(8002, function() {
   console.log('World API listening on port 8002');
@@ -33,4 +47,9 @@ function updateEmployees(employeesReadyFn) {
   });
 }
 
-
+function updateDepartments(departmentsReadyFn) {
+  db.getDepartments(function(rows) {
+    departments = rows;
+    departmentsReadyFn();
+  });
+}
