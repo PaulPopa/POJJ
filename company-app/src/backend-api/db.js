@@ -44,6 +44,7 @@ exports.addEmployee = function(data, readyFn){
       readyFn(results.insertId);
 
   });
+}
 
 exports.getDepartments = function(callback) {
   db.query("SELECT dep_name FROM department;",

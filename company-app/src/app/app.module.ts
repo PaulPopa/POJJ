@@ -15,7 +15,7 @@ import { DepartmentFilterPipe } from './department-filter.pipe';
   declarations: [
     AppComponent,
     ListComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
     DepartmentEmployeeComponent,
     DepartmentFilterPipe
   ],

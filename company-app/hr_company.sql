@@ -29,13 +29,13 @@ CREATE TABLE salesEmployee(
     FOREIGN KEY (emp_id) REFERENCES employee(emp_id)
 );
 
-INSERT INTO employee(emp_name, address, email, nin, bank_acc_number, bank_sort_code, start_salary) 
+INSERT INTO employee(emp_name, address, email, nin, bank_acc_number, bank_sort_code, start_salary)
 VALUES ('B. Rodgers', '3 George Street', 'brodgers@kainos.com', 'SG304050P', '12345678', '040004', 27500);
-INSERT INTO employee(emp_name, address, email, nin, bank_acc_number, bank_sort_code, start_salary) 
+INSERT INTO employee(emp_name, address, email, nin, bank_acc_number, bank_sort_code, start_salary)
 VALUES ('A. Daley', '91 Western Road', 'adaley@kainos.com', 'JA754351P', '28391521', '090104', 15000);
-INSERT INTO employee(emp_name, address, email, nin, bank_acc_number, bank_sort_code, start_salary) 
+INSERT INTO employee(emp_name, address, email, nin, bank_acc_number, bank_sort_code, start_salary)
 VALUES ('K. Knight', '27 Colmore Row', 'kknight@kainos.com', 'KC447563P', '45856877', '070128', 32000);
-INSERT INTO employee(emp_name, address, email, nin, bank_acc_number, bank_sort_code, start_salary) 
+INSERT INTO employee(emp_name, address, email, nin, bank_acc_number, bank_sort_code, start_salary)
 VALUES ('M. Atkins', '20 Wellfield Road', 'matkins@kainos.com', 'AW999728B', '16690537', '090128', 30000);
 
 INSERT INTO department(emp_id, dep_name)
