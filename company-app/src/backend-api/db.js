@@ -38,6 +38,14 @@ exports.addEmployee = function(data, readyFn){
   });
 }
 
+exports.addDepartment = function(data, readyFn){
+  db.query('INSERT INTO department SET ?', data,
+  function(error, results, fields) {
+    if (error) throw error;
+    readyFn(results.insertId);
+  });
+}
+
 exports.getDepartments = function(callback) {
   db.query("SELECT GROUP_CONCAT(emp_id) AS emp_id, GROUP_CONCAT(emp_name) AS emp_name, dep_name FROM employee GROUP BY dep_name",
     function(err, rows) {
