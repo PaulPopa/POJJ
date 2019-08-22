@@ -2,19 +2,23 @@
 .list {
     text-align: left;
     float: left;
-    color: darkblue;
-}
-
-.detail {
-    text-align: left;
-    float: right;
-    color: maroon;
+    color: black;
 }
 
 form input.ng-valid {
-    background: lightgreen;
+    border: 2px solid green;
+    border-radius: 4px;
 }
 
 form input.ng-invalid {
-    background: pink;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+form input {
+    width: 60%;
+    color: black;
+    padding: 12px 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
 }
