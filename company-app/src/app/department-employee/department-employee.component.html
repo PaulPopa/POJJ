@@ -1,0 +1,7 @@
+<div class="list">
+  <h2>Department</h2>
+  <input [(ngModel)]="filterText" placeholder="Search Department"/>
+  <ul>
+    <li *ngFor="let department of data.departments">{{department.dep_name}}</li>
+  </ul>
+</div>
