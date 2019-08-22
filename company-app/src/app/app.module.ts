@@ -17,6 +17,9 @@ import { EmailDirective } from './email.directive';
 import { NinDirective } from './nin.directive';
 import { BankAccountNumberDirective } from './bank-account-number.directive';
 import { BankSortCodeDirective } from './bank-sort-code.directive';
+import { MatSelectModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DepartmentNameDirective } from './department-name.directive';
 
 @NgModule({
   declarations: [
@@ -31,13 +34,16 @@ import { BankSortCodeDirective } from './bank-sort-code.directive';
     EmailDirective,
     NinDirective,
     BankAccountNumberDirective,
-    BankSortCodeDirective
+    BankSortCodeDirective,
+    DepartmentNameDirective
   ],
   imports: [
     NgbModule,
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

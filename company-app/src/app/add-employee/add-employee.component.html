@@ -39,6 +39,17 @@
         <strong><span style="color: red;" *ngIf="addForm.hasError('required', 'start_salary')">*</span>Employee starting salary: </strong>
         <div><input type="number" [(ngModel)]="newEmployee.start_salary" name="start_salary" placeholder="Salary" required companyEmployee></div>
         <div style="color: red;" *ngIf="addForm.hasError('checksalary', 'start_salary')">The salary must be between £12000 and £200000</div>
-        <input type="submit" [disabled]="!addForm.valid">
+
+      <br>
+
+      <strong>Choose a department: Sales, Production or Marketing</strong>
+      <div><input type="text" [(ngModel)]="newEmployee.dep_name" name="dep_name" placeholder="Department Name" required companyDepartmentName/></div>
+      <div style="color: red;" *ngIf="addForm.hasError('nodep', 'dep_name')">This is an invalid department</div>
+
+      <br>
+
+      <input type="submit" [disabled]="!addForm.valid">
+
+        <br>
     </fieldset>
 </form>
